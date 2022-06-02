@@ -12,4 +12,6 @@ router.put('/updateRecord', Controller.updateRecord);
 
 router.delete('/deleteRecord', Controller.deleteRecord);
 
-module.exports = router
+router.delete('/deleteAllRecords', Controller.deleteAllRecords);
+
+module.exports = router;

@@ -53,6 +53,16 @@ class Service {
       return { status: 500 };
     }
   }
+
+  async deleteAllRecords() {
+    try {
+      await Model.remove({});
+      return { status: 200 };
+    } catch(e) {
+      console.log('!!!deleteAllRecords!!!', e);
+      return { status: 500 };
+    }
+  }
 }
 
 module.exports = new Service();

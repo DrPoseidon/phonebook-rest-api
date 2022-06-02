@@ -54,6 +54,16 @@ class InstaPhotosController {
       res.sendStatus(500);
     }
   }
+
+  async deleteAllRecords(req, res) {
+    try {
+      const { status } = await Service.deleteAllRecords();
+      return res.send(status);
+    } catch(e) {
+      console.log(e);
+      res.sendStatus(500);
+    }
+  }
 }
 
 module.exports = new InstaPhotosController;

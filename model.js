@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const PhoneBook = new Schema({
+  _id: String,
   email: { type: String, required: true },
   jogTitle: { type: String, required: true },
   name: { type: String, required: true },
