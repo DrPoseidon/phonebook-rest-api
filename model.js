@@ -1,15 +1,13 @@
 const { Schema, model } = require('mongoose');
 
-const PhoneBook = new Schema({
-  _id: String,
-  email: { type: String, required: true },
-  jogTitle: { type: String, required: true },
+module.exports = model('phonebook', new Schema({
+  _id: { type: String, unique: true },
+  email: { type: String },
+  jobTitle: { type: String },
   name: { type: String, required: true },
-  organization: { type: String, required: true },
-  patronymic: { type: String, required: true },
+  organization: { type: String },
+  patronymic: { type: String },
   phoneNumber: { type: String, required: true },
-  surname: { type: String, required: true },
-  photo: { type: Buffer, required: true },
-});
-
-module.exports = model('phonebook', PhoneBook);
+  surname: { type: String },
+  photo: { type: Buffer },
+}));
