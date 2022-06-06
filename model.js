@@ -9,5 +9,5 @@ module.exports = model('phonebook', new Schema({
   patronymic: { type: String },
   phoneNumber: { type: String, required: true },
   surname: { type: String },
-  photo: { type: Buffer },
+  photo: { type: String },
 }));
